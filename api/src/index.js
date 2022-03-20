@@ -1,7 +1,7 @@
 import express from 'express';
 import cors from 'cors';
 
-require('dotenv').config();
+import config from './config.js';
 
 import dbo from './db/connection.js';
 import routes from './routes/recipes.js';
