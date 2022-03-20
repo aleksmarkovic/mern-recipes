@@ -2,15 +2,16 @@ import { MongoClient } from 'mongodb';
 
 import config from '../config.js';
 
-console.log(process.env);
-console.log('process.env');
-const Db = config.ATLAS_URI;
+const Db = `mongodb+srv://${config.DB.USERNAME}:${encodeURIComponent(
+    config.DB.PASSWORD
+)}@recipecluster.aeziq.mongodb.net/myFirstDatabase?retryWrites=true&w=majority`;
+
 const client = new MongoClient(Db, {
     useNewUrlParser: true,
     useUnifiedTopology: true,
 });
 
-const _db = null;
+let _db = null;
 
 export default {
     connectToServer: function (callback) {
