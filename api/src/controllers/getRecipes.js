@@ -1,5 +1,3 @@
-import { ObjectId } from 'mongodb';
-
 import dbo from '../db/connection.js';
 
 export default (req, res) => {
