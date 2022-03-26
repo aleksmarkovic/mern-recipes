@@ -51,7 +51,7 @@ const RecipeTable = ({
     return (
         <Modal show={showModal} onHide={handleClose}>
             <Modal.Header closeButton>
-                <Modal.Title>Modal heading</Modal.Title>
+                <Modal.Title>Recipe</Modal.Title>
             </Modal.Header>
             <Modal.Body>
                 <Form
